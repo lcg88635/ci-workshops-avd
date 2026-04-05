@@ -291,6 +291,7 @@ vlan internal order ascending range 1006 1199
 | 30 | Thirty | - |
 | 40 | Forty | - |
 | 45 | Forty-five | - |
+| 55 | Fifty-five | - |
 | 4093 | MLAG_L3 | MLAG |
 | 4094 | MLAG | MLAG |
 
@@ -306,6 +307,9 @@ vlan 40
 !
 vlan 45
    name Forty-five
+!
+vlan 55
+   name Fifty-five
 !
 vlan 4093
    name MLAG_L3
@@ -471,6 +475,7 @@ interface Loopback0
 | Vlan30 | Thirty | default | - | False |
 | Vlan40 | Forty | default | - | False |
 | Vlan45 | Forty-five | default | - | False |
+| Vlan55 | Fifty-five | default | - | False |
 | Vlan4093 | MLAG_L3 | default | 1500 | False |
 | Vlan4094 | MLAG | default | 1500 | False |
 
@@ -481,6 +486,7 @@ interface Loopback0
 | Vlan30 |  default  |  10.30.30.2/24  |  -  |  10.30.30.1  |  -  |  -  |
 | Vlan40 |  default  |  10.40.40.2/24  |  -  |  10.40.40.1  |  -  |  -  |
 | Vlan45 |  default  |  10.45.45.2/24  |  -  |  10.45.45.1  |  -  |  -  |
+| Vlan55 |  default  |  10.55.55.2/24  |  -  |  10.55.55.1  |  -  |  -  |
 | Vlan4093 |  default  |  10.2.253.2/31  |  -  |  -  |  -  |  -  |
 | Vlan4094 |  default  |  10.2.253.0/31  |  -  |  -  |  -  |  -  |
 
@@ -505,6 +511,12 @@ interface Vlan45
    no shutdown
    ip address 10.45.45.2/24
    ip virtual-router address 10.45.45.1
+!
+interface Vlan55
+   description Fifty-five
+   no shutdown
+   ip address 10.55.55.2/24
+   ip virtual-router address 10.55.55.1
 !
 interface Vlan4093
    description MLAG_L3
