@@ -3,12 +3,6 @@ aaa_authorization:
     default: local
 aaa_root:
   disabled: true
-banners:
-  motd: 'You shall not pass. Unless you are authorized. Then you shall pass.
-
-    EOF
-
-    '
 config_end: true
 daemon_terminattr:
   cvaddrs:
@@ -84,17 +78,6 @@ local_users:
   privilege: 15
   role: network-admin
   sha512_password: $6$arista$xJSA6Cf401W/ltmkehXQnCydyBzZbce47UHkW02iPytzJ7ijmzwCeftrHEP7cOo0PPtt7psCGylke3vNx7d0L/
-  ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwOl0aUNJx/TIKMdLsJDnQ08RnWvo/8clpJITfPbII9LIdlgiQ0w6A9dA/L4XQ4+PwFIRl2Qb5Wne101nFCVGnEA1D0/K6IBuysEubqmRp6+KaUdihykdTh0WZjlQEL6nKvPo/kGRLal9Cyns6IZobuERLFR5dD+tpzhJOVUj7I7vPZ9KP6UEjIavoevYj6CY5790K1Hk5KYdepdvsHalx5hnulsyLRdinObqspOGqidH8Q5w9P5tFPWPH5jgBV7fxFq1YFSZU/mQ1Wr/XNZe8cfar0N0SaP0kJEphIkTR5wjlEbIX7L/0MfKWOGyaUMIFnlBX9LdoyMZMduAGa5v3
-    arista@avd-test-1-002b7999-eos
-logging:
-  vrfs:
-  - name: default
-    source_interface: Management0
-    hosts:
-    - name: 10.200.0.108
-      protocol: udp
-    - name: 10.200.1.108
-      protocol: udp
 management_api_http:
   enable_https: true
   enable_vrfs:

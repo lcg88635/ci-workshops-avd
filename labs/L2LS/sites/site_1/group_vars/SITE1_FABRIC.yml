@@ -67,7 +67,9 @@ l2leaf:
 
 underlay_routing_protocol: OSPF
 
-
+##################################################################
+# WAN/Core Edge Links
+##################################################################
 
 core_interfaces:
   p2p_links:
@@ -91,4 +93,3 @@ core_interfaces:
       nodes: [ s1-spine2, WANCORE ]
       interfaces: [ Ethernet8, Ethernet2 ]
       include_in_underlay_protocol: true
-      
